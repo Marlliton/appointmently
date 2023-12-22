@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@repo/ui/button";
+import { useEffect } from "react";
 
 function Gradient({
   conic,
@@ -47,11 +49,19 @@ const LINKS = [
     title: "Deploy",
     href: "https://vercel.com/new",
     description:
-      " Instantly deploy your Turborepo to a shareable URL with Vercel.",
+      " Instantly deploy your Turborepo to a shareable URL with Vercel. URL with Vercel.",
   },
 ];
 
 export default function Page(): JSX.Element {
+  const a = 0;
+  useEffect(() => {
+    if (a) teste();
+  }, []);
+
+  async function teste() {
+    return new Promise((resolve) => resolve);
+  }
   return (
     <main className={styles.main}>
       <div className={styles.description}>
