@@ -14,4 +14,8 @@ export class Teste {
   get idade() {
     return this.props.idade
   }
+
+  get nomeEIdade() {
+    return `${this.nome} ++++ ${this.idade}`
+  }
 }
