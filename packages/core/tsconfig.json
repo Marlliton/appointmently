@@ -6,6 +6,6 @@
     "module": "CommonJS",
     "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src"],
+  "include": ["src", "test", "vitest.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
