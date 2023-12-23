@@ -203,6 +203,9 @@ importers:
 
   packages/core:
     devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@types/node':
         specifier: ^20.10.5
         version: 20.10.5
