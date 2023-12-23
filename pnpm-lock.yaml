@@ -117,7 +117,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@repo/ui':
+      '@appointmently/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -163,7 +163,7 @@ importers:
       '@appointmently/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/ui':
+      '@appointmently/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:

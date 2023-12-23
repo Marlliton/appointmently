@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { Code } from "@repo/ui/code";
+import { Card } from "@appointmently/ui/card";
+import { Code } from "@appointmently/ui/code";
 import styles from "./page.module.css";
-import { Button } from "@repo/ui/button";
+import { Button } from "@appointmently/ui/button";
 import { useEffect } from "react";
 
 function Gradient({
