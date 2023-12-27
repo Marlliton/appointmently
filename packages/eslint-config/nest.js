@@ -30,9 +30,8 @@ module.exports = {
     {
       files: ["*.js?(x)", "*.ts?(x)"],
       rules: {
-        indent: ["warn", 2],
+        indent: 'off',
         "linebreak-style": ["error", "unix"],
-        // quotes: ["error", "double"],
         semi: ["error", "always"],
         "object-curly-spacing": ["error", "always"],
         "no-unused-vars": "warn",

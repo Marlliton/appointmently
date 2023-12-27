@@ -2,6 +2,13 @@
   "name": "@appointmently/core",
   "version": "1.0.0",
   "description": "",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "main": "./dist/index.js",
   "scripts": {
     "build": "pnpm exec tsc",
