@@ -42,6 +42,8 @@ module.exports = {
         semi: ["warn", "always"],
         "object-curly-spacing": ["error", "always"],
         "no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": "warn", 
         "import/no-duplicates": "off",
         "prettier/prettier": [
           "error",

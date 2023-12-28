@@ -1,4 +1,5 @@
 import { Entity } from "@/common/entities/entity";
+import { UniqueEntityId } from "@/common/entities/unique-entity-id";
 
 export interface ServiceProps {
   name: string;
@@ -26,9 +27,12 @@ export class Service extends Entity<Service, ServiceProps> {
     return this.props.duration;
   }
 
-  static create(props: ServiceProps) {
-    return new Service({
-      ...props,
-    });
+  static create(props: ServiceProps, id?: UniqueEntityId) {
+    return new Service(
+      {
+        ...props,
+      },
+      id,
+    );
   }
 }

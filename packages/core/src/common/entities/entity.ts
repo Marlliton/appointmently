@@ -4,16 +4,16 @@ export abstract class Entity<Type, Props> {
   private _id: UniqueEntityId;
   protected constructor(
     protected props: Props,
-    id?: string,
+    id?: UniqueEntityId,
   ) {
-    this._id = new UniqueEntityId(id);
+    this._id = id ?? new UniqueEntityId();
   }
 
   get id() {
     return this._id;
   }
 
-  equals(entity: Entity<unknown, unknown>) {
+  equals(entity: Entity<Type, Props>) {
     return this._id.equals(entity._id);
   }
 

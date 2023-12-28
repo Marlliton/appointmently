@@ -36,6 +36,7 @@ module.exports = {
         "object-curly-spacing": ["error", "always"],
         "no-unused-vars": "warn",
         "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": "warn", 
         "no-useless-constructor": "off",
         "no-use-before-define": "off",
         "import/no-duplicates": "off",
