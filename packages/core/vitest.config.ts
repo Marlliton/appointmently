@@ -1,3 +1,4 @@
+import tsConfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
@@ -7,5 +8,6 @@ export default defineConfig({
   },
   plugins: [
     // This is required to build the test files with SWC
+    tsConfigPaths(),
   ],
 });

@@ -2,9 +2,10 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "moduleResolution": "Node",
-    "module": "CommonJS",
     "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "test", "vitest.config.ts", ".turbo"],

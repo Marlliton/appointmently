@@ -35,7 +35,9 @@ module.exports = {
         semi: ["error", "always"],
         "object-curly-spacing": ["error", "always"],
         "no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
         "no-useless-constructor": "off",
+        "no-use-before-define": "off",
         "import/no-duplicates": "off",
         "prettier/prettier": [
           "error",

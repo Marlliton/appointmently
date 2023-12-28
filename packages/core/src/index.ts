@@ -1,3 +1,3 @@
-import { Service } from "./domain/appointment/enterprise/entities/Service";
+import { Service } from "./domain/appointment/enterprise/entities/service";
 
 export { Service };
