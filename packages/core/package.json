@@ -2,13 +2,17 @@
   "name": "@appointmently/core",
   "version": "1.0.0",
   "description": "",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist"
+  },
   "main": "./dist/index.js",
   "scripts": {
-    "build": "pnpm exec tsc",
-    "dev": "pnpm exec tsc --watch",
+    "build": "pnpm exec tsc -b tsconfig.build.json",
+    "dev": "pnpm exec tsc -b tsconfig.build.json --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage"
