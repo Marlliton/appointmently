@@ -1,31 +1,27 @@
 import { Entity } from "@/common/entities/entity";
 import { UniqueEntityId } from "@/common/entities/unique-entity-id";
+import { Name } from "@/common/value-objects/name";
 import { Optional } from "@/types/Optional";
 
-export interface ServiceProps {
-  name: string;
-  price: number;
-  description: string;
-  duration: number;
+export interface ClientProps {
+  name: Name;
+  email: string;
+  photoURL: string;
   createdAt: Date;
   updatedAt?: Date;
 }
 
-export class Service extends Entity<Service, ServiceProps> {
+export class Client extends Entity<Client, ClientProps> {
   get name() {
-    return this.props.name;
+    return this.props.name._value;
   }
 
-  get price() {
-    return this.props.price;
+  get email() {
+    return this.props.email;
   }
 
-  get description() {
-    return this.props.description;
-  }
-
-  get duration() {
-    return this.props.duration;
+  get photoURL() {
+    return this.props.photoURL;
   }
 
   get createdAt() {
@@ -36,8 +32,8 @@ export class Service extends Entity<Service, ServiceProps> {
     return this.props.updatedAt;
   }
 
-  static create(props: Optional<ServiceProps, "createdAt">, id?: UniqueEntityId) {
-    return new Service(
+  static create(props: Optional<ClientProps, "createdAt">, id?: UniqueEntityId) {
+    return new Client(
       {
         ...props,
         createdAt: props.createdAt ?? new Date(),

@@ -11,11 +11,12 @@
   },
   "main": "./dist/index.js",
   "scripts": {
-    "build": "pnpm exec tsc -b tsconfig.build.json",
+    "build": "rm -rf ./dist && pnpm exec tsc -b tsconfig.build.json",
     "dev": "pnpm exec tsc -b tsconfig.build.json --watch",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:cov": "vitest run --coverage"
+    "test:cov": "vitest run --coverage",
+    "test:cov:watch": "vitest --coverage"
   },
   "keywords": [],
   "author": "",
