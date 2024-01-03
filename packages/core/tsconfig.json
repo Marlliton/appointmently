@@ -3,9 +3,10 @@
   "compilerOptions": {
     "outDir": "dist",
     "forceConsistentCasingInFileNames": true,
+    "rootDir": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./test/*"],
     }
   },
-  "include": ["src"],
+  "include": ["src", "test"],
 }
