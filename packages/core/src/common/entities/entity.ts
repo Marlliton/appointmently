@@ -18,13 +18,14 @@ export abstract class Entity<Type, Props> {
   }
 
   clone(props: Partial<Props>): Type {
-    const clonedEntity = Object.create(this.constructor.prototype);
-    return Object.assign(clonedEntity, {
-      props: {
+    const clonedEntity = new (this.constructor as new (props: Props, id: UniqueEntityId) => Type)(
+      {
         ...this.props,
         ...props,
       },
-      _id: this._id,
-    });
+      this._id,
+    );
+
+    return clonedEntity;
   }
 }
