@@ -40,17 +40,24 @@ export class Day extends Entity<Day, DayProps> {
       props?.beginningOfDay ?? Hour.create({ value: dayjsUTC().startOf("day"), available: true });
     const endOfDay =
       props?.endOfDay ?? Hour.create({ value: dayjsUTC().endOf("day"), available: true });
-    console.log(dayjsUTC());
+
     const hours =
       props?.hours ??
-      Array.from({ length: 3 }).map((_, i) => {
+      Array.from({ length: 24 }).map((_, i) => {
         const hour = beginningOfDay.value.add(i, "hour");
 
         const available =
-          (beginningOfDay.value.isAfter(hour) || beginningOfDay.value.isSame(hour)) &&
-          (endOfDay.value.isBefore(hour) || endOfDay.value.isSame(hour));
+          (hour.isAfter(beginningOfDay.value) || hour.isSame(beginningOfDay.value)) &&
+          (hour.isBefore(endOfDay.value) || hour.isSame(endOfDay.value));
 
-        return Hour.create({ value: hour, available });
+        return Hour.create({
+          value: hour,
+          available: hour.isSame(beginningOfDay.value)
+            ? beginningOfDay.available
+            : hour.isSame(endOfDay.value)
+              ? endOfDay.available
+              : available,
+        });
       });
 
     return new Day(
